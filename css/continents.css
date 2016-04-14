@@ -1,0 +1,122 @@
+body {
+  background-color: #add836;;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  margin: 0;
+  padding: 0;}
+
+
+#continents {
+  margin: auto;
+  width: 100%;
+  padding:10px;
+  position: relative;
+}
+/*General rules for everything within the table*/
+table {
+  position: fixed;
+  right: 0;
+  top: 1;
+  border: 3px solid #000000;
+}
+/*reset button to make counter go back to zero*/
+#reset {
+  text-align: center;
+}
+
+#correctScore {
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 20px, 5;     /* 10px top & bottom padding, 0px left & right */
+  border-color: #000;
+  border-style: solid;
+  text-align: center;
+}
+
+#incorrectScore {
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 20px 2;     /* 10px top & bottom padding, 0px left & right */
+  border-color: #000;
+  border-style: solid;
+  text-align: center;
+}
+/*Positions and sizes of all the continents*/
+#europe {
+  position: relative;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  left: 180px;
+}
+
+#africa {
+  float: left;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#asiaMiddleEast {
+  position: relative;
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+  left: 180px
+}
+
+#northAmerica {
+  position: relative;
+  float: right;
+  width: auto;
+  max-width: 450px;
+  max-height: 450px;
+}
+
+#southAmerica {
+  position: relative;
+  float: right;
+  width: auto;
+  max-width: 450px;
+  max-height: 450px;
+  bottom: 170px;
+  right:30px;
+}
+
+#oceania {
+  position: relative;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  bottom: 220px;
+  left: 30px;
+}
+/*rules to blur all the contents when the mouse hovers over any of them.*/
+#northAmerica:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#oceania:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#asiaMiddleEast:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#southAmerica:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#africa:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#europe:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+/*hide class to take away modal where user enters input of world capitals*/
+.hide {
+  display: none;
+}

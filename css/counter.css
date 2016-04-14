@@ -1,0 +1,36 @@
+body {
+  background-color: #add836;;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  margin: 0;
+  padding: 0;}
+
+
+#sudan {
+  margin: auto;
+  width: 100%;
+  padding:10px;
+  position: relative;
+}
+
+table {
+  position: fixed;
+  right: 0;
+  top: 1;
+  border: 3px solid #000000;
+}
+
+#correctScore {
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 20px, 5;     /* 10px top & bottom padding, 0px left & right */
+  border-color: #000;
+  border-style: solid;
+  text-align: center;
+}
+
+#incorrectScore {
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 20px 2;     /* 10px top & bottom padding, 0px left & right */
+  border-color: #000;
+  border-style: solid;
+  text-align: center;
+}
