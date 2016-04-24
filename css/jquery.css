@@ -1,0 +1,199 @@
+body {
+  background-color: #add836;;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  margin: 0;
+  padding: 0;}
+
+/*General rules for everything within the table*/
+#counter {
+  position: fixed;
+  right: 0;
+  top: 0;
+  border: 3px solid #000000;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+@keyframes heightChange {
+  from {height: 0px;}
+  to {height: 270px;}
+}
+
+/*reset button to make counter go back to zero*/
+#reset {
+  text-align: center;
+}
+
+span {
+  display: inline-block;
+  position: fixed;
+  left: 73%;
+  top: 0;
+  font-size: 24px;
+}
+
+#correctScore {
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 20px, 5;     /* 10px top & bottom padding, 0px left & right */
+  border-color: #000;
+  border-style: solid;
+  text-align: center;
+}
+
+#incorrectScore {
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 20px 2;     /* 10px top & bottom padding, 0px left & right */
+  border-color: #000;
+  border-style: solid;
+  text-align: center;
+}
+
+#ruleBar {
+  position: absolute;
+  background-color: #87421F;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 5px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+#ruleClose {
+  text-align: right;
+}
+
+#ruleList.hide {
+  display: none;
+}
+
+
+#modal.hide {
+  position: fixed;
+  display: none;
+  width: 550px;
+  height: 0px;
+  margin: 5% auto;
+  padding: 0px;
+  left: 0;
+  right: 0;
+  background-color: #87421F;
+  border-radius: 25px;
+}
+
+#modal.Africa, #modal.Europe, #modal.Asia_Middle_East, #modal.South_America, #modal.North_America, #modal.Oceania {
+  position: fixed;
+  width: 550px;
+  height: 270px;
+  padding: 10px;
+  animation: heightChange 2s ease;
+  overflow: hidden;
+  margin: 5% auto;
+  left: 0;
+  right: 0;
+  background-color: #87421F;
+  border-radius: 25px;
+}
+
+
+#cancel {
+  text-align: right;
+  font-family: 'Oswald', 'Futura', sans-serif;
+  padding: 10px;
+}
+
+.input {
+  z-index: -1;
+  padding: 5px;
+}
+
+
+/*Positions and sizes of all the continents*/
+#Europe {
+  position: absolute;
+  left: 450px;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  z-index: -2;
+}
+
+#Africa {
+  float: left;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  z-index: -2;
+}
+
+#Asia_Middle_East {
+  position: absolute;
+  top: 450px;
+  left: 450px;
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+  z-index: -2;
+}
+
+#North_America {
+  position: relative;
+  float: right;
+  width: auto;
+  max-width: 450px;
+  max-height: 450px;
+  z-index: -2;
+}
+
+#South_America {
+  position: absolute;
+  right: 10px;
+  top: 500px;
+  width: auto;
+  max-width: 450px;
+  max-height: 450px;
+  z-index: -2;
+}
+
+#Oceania {
+  position: absolute;
+  left: 10px;
+  top: 450px;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  z-index: -2;
+}
+/*rules to blur all the contents when the mouse hovers over any of them.*/
+#North_America:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#Oceania:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#Asia_Middle_East:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#South_America:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#Africa:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+
+#Europe:hover {
+  -webkit-filter: blur(2px); filter: blur(2px);
+}
+/*hide class to take away modal where user enters input of world capitals
+.hide {
+  display: none;
+}*/
