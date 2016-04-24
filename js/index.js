@@ -42,7 +42,7 @@ var continentObj = {
     'Slovakia': 'Bratislava'
   },
   'North_America': {
-    'United States': 'Washington',
+    'United States': 'Washington DC',
     'Mexico': 'Mexico City',
     'Panama': 'Panama City',
     'Belize': 'Belmopan',
@@ -111,12 +111,12 @@ var formArray = [form1, form2, form3, form4, form5, form6, form7]
 
 function EuropeSubmit(e) {
   e.preventDefault();
-  var country = e.target.id; //country = ID of the 'i know this' button (which equals the country name)
-  var cap = continentObj['Europe'][country]; //cap = the value to each key in the above dictionary
+  var country = e.target.id;
+  var cap = continentObj['Europe'][country].toUpperCase();
   for (var i = 0; i < userInput.length; i++) {
     if (userInput[i].id === country) {
-      if (userInput[i].value === cap) {
-        feedback.textContent = 'Correct! you win!'
+      if (userInput[i].value.toUpperCase() === cap) {
+        feedback.textContent = 'Correct!'
         correctScore.innerHTML = (correctTally += 1)
       } else if (userInput[i].value == '') {
         feedback.textContent = 'C\'mon! take a guess!'
@@ -130,12 +130,12 @@ function EuropeSubmit(e) {
 
 function South_AmericaSubmit(e) {
   e.preventDefault();
-  var country = e.target.id; //country = ID of the 'i know this' button (which equals the country name)
-  var cap = continentObj['South_America'][country]; //cap = the value to each key in the above dictionary
+  var country = e.target.id;
+  var cap = continentObj['South_America'][country].toUpperCase();
   for (var i = 0; i < userInput.length; i++) {
     if (userInput[i].id === country) {
-      if (userInput[i].value === cap) {
-        feedback.textContent = 'Correct! you win!'
+      if (userInput[i].value.toUpperCase() === cap) {
+        feedback.textContent = 'Correct!'
         correctScore.innerHTML = (correctTally += 1)
       } else if (userInput[i].value == '') {
         feedback.textContent = 'C\'mon! take a guess!'
@@ -149,12 +149,12 @@ function South_AmericaSubmit(e) {
 
 function Asia_Middle_EastSubmit(e) {
   e.preventDefault();
-  var country = e.target.id; //country = ID of the 'i know this' button (which equals the country name)
-  var cap = continentObj['Asia_Middle_East'][country]; //cap = the value to each key in the above dictionary
+  var country = e.target.id;
+  var cap = continentObj['Asia_Middle_East'][country].toUpperCase();
   for (var i = 0; i < userInput.length; i++) {
     if (userInput[i].id === country) {
-      if (userInput[i].value === cap) {
-        feedback.textContent = 'Correct! you win!'
+      if (userInput[i].value.toUpperCase() === cap) {
+        feedback.textContent = 'Correct!'
         correctScore.innerHTML = (correctTally += 1)
       } else if (userInput[i].value == '') {
         feedback.textContent = 'C\'mon! take a guess!'
@@ -168,12 +168,12 @@ function Asia_Middle_EastSubmit(e) {
 
 function North_AmericaSubmit(e) {
   e.preventDefault();
-  var country = e.target.id; //country = ID of the 'i know this' button (which equals the country name)
-  var cap = continentObj['North_America'][country]; //cap = the value to each key in the above dictionary
+  var country = e.target.id;
+  var cap = continentObj['North_America'][country].toUpperCase();
   for (var i = 0; i < userInput.length; i++) {
     if (userInput[i].id === country) {
-      if (userInput[i].value === cap) {
-        feedback.textContent = 'Correct! you win!'
+      if (userInput[i].value.toUpperCase() === cap) {
+        feedback.textContent = 'Correct!'
         correctScore.innerHTML = (correctTally += 1)
       } else if (userInput[i].value == '') {
         feedback.textContent = 'C\'mon! take a guess!'
@@ -187,12 +187,12 @@ function North_AmericaSubmit(e) {
 
 function AfricaSubmit(e) {
   e.preventDefault();
-  var country = e.target.id; //country = ID of the 'i know this' button (which equals the country name)
-  var cap = continentObj['Africa'][country]; //cap = the value to each key in the above dictionary
+  var country = e.target.id;
+  var cap = continentObj['Africa'][country].toUpperCase();
   for (var i = 0; i < userInput.length; i++) {
     if (userInput[i].id === country) {
-      if (userInput[i].value === cap) {
-        feedback.textContent = 'Correct! you win!'
+      if (userInput[i].value.toUpperCase() === cap) {
+        feedback.textContent = 'Correct!'
         correctScore.innerHTML = (correctTally += 1)
       } else if (userInput[i].value == '') {
         feedback.textContent = 'C\'mon! take a guess!'
@@ -206,12 +206,12 @@ function AfricaSubmit(e) {
 
 function OceaniaSubmit(e) {
   e.preventDefault();
-  var country = e.target.id; //country = ID of the 'i know this' button (which equals the country name)
-  var cap = continentObj['Oceania'][country]; //cap = the value to each key in the above dictionary
+  var country = e.target.id;
+  var cap = continentObj['Oceania'][country].toUpperCase();
   for (var i = 0; i < userInput.length; i++) {
     if (userInput[i].id === country) {
-      if (userInput[i].value === cap) {
-        feedback.textContent = 'Correct! you win!'
+      if (userInput[i].value.toUpperCase() === cap) {
+        feedback.textContent = 'Correct!'
         correctScore.innerHTML = (correctTally += 1)
       } else if (userInput[i].value == '') {
         feedback.textContent = 'C\'mon! take a guess!'
@@ -232,7 +232,8 @@ function OceaniaSubmit(e) {
       button, and their IDs are country names.  the button IDs for Oceania are
       assigned by the OceaniaClick function below.
   4. cap = the value pair to continentObj['Oceania'][country], which is the capital
-      of each country.
+      of each country. toUpperCase is added here and below so that the type case
+      will not effect what is returned from the function.
   5. start the for loop, for 7 instances, incrementing by one (7 because userInput.length = 7)
   6. userInput is an array that covers all the blank spaces where one enters the
       input i.e. writes in the capitals to the countries. if the blank space is
@@ -268,7 +269,8 @@ function resetScore(e) {
 This creates a function called reset score that takes an event object. That
 event object is used on the first line of the function to prevent the link from
 performing its default function. after it prevents that, it sets all the global
-variables used in the counter to zero.*/
+variables used in the counter to zero.
+*/
 
 function displayRules(e) {
   e.preventDefault()
@@ -279,6 +281,12 @@ function closeRules(e) {
   e.preventDefault()
   ruleList.className = 'hide'
 }
+
+/*
+creates functions that will be called when the clickable elements in the rules
+are clicked. On their own, these functions just change the CSS class of the rules
+so that they can go from hidden to displayed.
+*/
 
 function EuropeClick(e) {
   e.preventDefault();
@@ -453,6 +461,11 @@ ruleClick.addEventListener('click', function(e) {
 ruleClose.addEventListener('click', function(e) {
   closeRules(e);
 }, false);
+
+/*
+  Adds event listeners to the 'how to play' link and the 'close' link
+  that appears when the rules are displayed
+*/
 
 Europe.addEventListener('click', function(e) {
   e.preventDefault()
@@ -652,3 +665,12 @@ $(function() {
     $('span').remove();
   })
 });
+ /*
+ This was a bit of jQuery that I added to show that I can use an external library
+ to add functionality to my website. This jQuery function selects all the continent
+ images and puts them in a matched set. then it adds an event listener to each on
+ writing in the ID of a continent to a fixed position(CSS) on the screen. after
+ the mouse is no longer on the continent, another event listener removes the
+<span> elements which contain the id that it written on to the screen. If it
+is not removed then the IDs never go away and all the text piles up.
+*/
